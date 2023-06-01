@@ -1,9 +1,15 @@
 #!/usr/bin/python3
 """This module contains the storage class"""
-from base_class import BaseClass, DecBase
-from sport import Sport
+from src.athlete import Athlete
+from src.base_class import BaseClass, DecBase
+from src.formula_1 import F1Athlete
+from src.sport import Sport
+from src.team import Team
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
+
+
+classes = {'Athlete': Athlete, 'F1Athlete': F1Athlete, 'Sport': Sport, 'Team': Team}
 
 
 class Database:
@@ -13,15 +19,16 @@ class Database:
 
     def __init__(self):
         """Database object instantiation"""
-        self.__engine = create_engine('mysql+mysqldb://root@localhost/rankd')
+        self.__engine = create_engine('mysql+mysqldb://root@localhost/stats')
 
     def save(self, obj=None):
         """Saves object to database"""
+        if self.__session is None:
+            self.reload()
         if obj is not None:
-            if self.__session is None:
-                self.reload()
             self.__session.add(obj)
-            self.__session.commit()
+
+        self.__session.commit()
 
     def reload(self):
         """Reloads data"""
@@ -34,6 +41,16 @@ class Database:
         if self.__session:
             self.__session.close()
 
-    def get(self, clss=None, obj_id=None):
+    def get(self, clss=None, obj_id=None, all=False):
         """This method retrieves data from the database"""
-        return self.__session.query(clss).filter_by(id=obj_id).first()
+        if all:
+            objs = []
+            for c in classes.values():
+                objs.extend(self.__session.query(c).all())
+            return objs
+
+        if clss:
+            if obj_id:
+                return self.__session.query(classes[clss]).filter_by(id=obj_id).first()
+            else:
+                return self.__session.query(classes[clss]).all()

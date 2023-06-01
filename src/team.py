@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module contains the team class"""
-from base_class import BaseClass, DecBase
+from src.base_class import BaseClass, DecBase
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 

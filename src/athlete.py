@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module contains athlete class definition"""
-from base_class import BaseClass, DecBase
+from src.base_class import BaseClass, DecBase
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
@@ -14,6 +14,11 @@ class Athlete(BaseClass, DecBase):
     salary = Column(String(60))
     sport_id = Column(String(60), ForeignKey('sports.id'), nullable=False)
     team_id = Column(String(60), ForeignKey('teams.id'))
+    type = Column(String(30))
+    __mapper_args__ = {
+        'polymorphic_identity': 'athlete',
+        'polymorphic_on': type
+    }
 
     def __init__(self, **kwargs):
         """Athlete object instantiation"""
