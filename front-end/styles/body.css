@@ -1,0 +1,248 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 500px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: rgb(40, 40, 40);
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+}
+
+#sport,
+#content {
+    margin: 10px;
+}
+
+#sport {
+    height: 200px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 90%;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-image: url("../images/lewis_hamilton_mercedes.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#sport #shadow {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.841);
+}
+
+#arrow_left {
+    align-items: center;
+    position: absolute;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    height: 20px;
+    width: 20px;
+    transform: rotate(315deg);
+    left: 140px;
+}
+
+#arrow_left,
+#arrow_right {
+    opacity: 0.3;
+}
+
+#arrow_left:hover,
+#arrow_right:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#arrow_right {
+    align-items: center;
+    position: absolute;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    height: 20px;
+    width: 20px;
+    transform: rotate(135deg);
+    right: 140px;
+}
+
+#sport h1 {
+    position: absolute;
+    align-items: center;
+    align-self: center;
+    font-size: 40px;
+}
+
+#sport h1:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/*#spoort::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.841);
+}*/
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 500px;
+    width: 90%;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background: black;
+}
+
+#content h1 {
+    margin-top: 0;
+}
+
+#content #headlines {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    background: rgb(105, 124, 128);
+    /*border-top: 2px solid black;*/
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0px;
+}
+
+#headlines #teams,
+#headlines #athletes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+#headlines #teams:hover,
+#headlines #athletes:hover {
+    cursor: pointer;
+}
+
+#headlines .current {
+    background: black;
+    color: white;
+}
+
+#article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 98%;
+    height: 400px;
+    max-height: 800px;
+    margin-bottom: 0px;
+    overflow-y: scroll;
+    /*border: 1px solid white;*/
+}
+
+#article::-webkit-scrollbar {
+    display: none;
+}
+
+#article .object:hover {
+    box-shadow: 0px 0px 2px 2px rgb(105, 124, 128);
+    cursor: pointer;
+}
+
+#article .object {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 19%;
+    min-width: 244px;
+    height: 100%;
+    background: rgb(22, 22, 22);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.object .picture {
+    width: 150px;
+    height: 150px;
+    max-width: 80%;
+    margin-left: 30px;
+    margin-top: 15px;
+    border: 3px solid rgb(128, 105, 105);
+    border-radius: 10px;
+    background-image: url("../images/lewis_hamilton.png");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0px;
+}
+
+#article .object .name {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.object .logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-height: 40%;
+    flex: 1;
+}
+
+.logos .flag {
+    background-image: url("../images/flags/british.png");
+}
+
+.logos .team {
+    background-image: url("../images/team_logos/Mercedes_AMG_Petronas_F1_Logo_2560px.png");
+}
+
+.logos .sport {
+    background-image: url("../images/sport_logos/formula_1.png");
+}
+
+.logos .flag,
+.logos .team,
+.logos .sport {
+    height: 20%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(105, 124, 128, 0.518);
+    box-shadow: 0px 0px 1px 1px rgb(128, 105, 105);
+    border-radius: 2px;
+    width: 80%;
+}
+
+#article #section_2 {
+    width: 40%;
+    height: 100%;
+}
+
+#article #section_3 {
+    width: 30%;
+    height: 100%;
+}
