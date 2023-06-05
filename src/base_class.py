@@ -11,11 +11,11 @@ DecBase = declarative_base()
 
 class BaseClass:
     """BaseClass definition"""
-    created = Column(DateTime, nullable=False, default=datetime.now())
+    created_at = Column(DateTime, nullable=False, default=datetime.now())
     genesis = Column(Date, nullable=False)
     id = Column(String(60), primary_key=True, default=str(uuid4()))
     name = Column(String(120), nullable=False)
-    updated = Column(DateTime, nullable=False, default=datetime.now())
+    updated_at = Column(DateTime, nullable=False, default=datetime.now())
 
     def __init__(self, **kwargs):
         """This method creates an instance of the class"""

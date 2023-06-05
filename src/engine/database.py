@@ -2,7 +2,7 @@
 """This module contains the storage class"""
 from src.athlete import Athlete
 from src.base_class import BaseClass, DecBase
-from src.formula_1 import F1Athlete
+from src.f1athlete import F1Athlete
 from src.sport import Sport
 from src.team import Team
 from sqlalchemy import create_engine
