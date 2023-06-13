@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 	  <meta charset="UTF-8">
-    <title>ST&#9733;TS</title>
+    <title>st&#9733;ts</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../static/scripts/stats.js"></script>
 	  <link rel="stylesheet" type="text/css" href="../static/styles/footer.css">
@@ -12,30 +12,34 @@
   </head>
   <body>
     <header>
-      <h1 id="logo">ST&#9733;TS</h1>
-      <div id="search">
-        <input type="text">
-        <button type="button">SEARCH</button>
+      <div id="header_top">
+        <h1 id="logo" class="home_link">st&#9733;ts</h1>
+        <nav id="navigation">
+          <ul>
+            <li class="home_link">HOME</li>
+            <li>H-2-H</li>
+            <li>ABOUT</li>
+          </ul>
+        </nav>
       </div>
-      <nav id="navigation">
-        <ul>
-          <li>HOME</li>
-          <li>COMPARE</li>
-          <li>ABOUT</li>
-        </ul>
-      </nav>
+      <div id="header_bottom">
+        <form id="search">
+          <input type="text" name="query" placeholder="What are you looking for?" class="input">
+          <input type="submit" value="SEARCH" class="button">
+        </form>
+      </div>
     </header>
     <div id="container">
       <section id="sport">
         <div id="shadow"></div>
         <div id="arrow_left"></div>
-        <h1>FORMULA ONE</h1>
+        <h1></h1>
         <div id="arrow_right"></div>
       </section>
       <section id="content">
         <h1 id="headlines">
+          <section id="athletes">ATHLETES</section>
           <section id="teams">TEAMS</section>
-          <section id="athletes" class="current">ATHLETES</section>
         </h1>
         <div id="article">
           
@@ -43,7 +47,14 @@
       </section>
 	  </div>
     <footer>
-      <p>ST&#9733;TS - 2023</p>
+      <nav id="navigation">
+        <ul>
+          <li class="home_link">HOME</li>
+          <li>HEAD-2-HEAD</li>
+          <li>ABOUT</li>
+        </ul>
+      </nav>
+      <p>Copyright &copy; 2023</p>
     </footer>
   </body>
 </html>

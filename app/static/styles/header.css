@@ -1,17 +1,25 @@
 header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     border-bottom: 1px solid rgba(0, 0, 0, 0.299);
     width: 100%;
+    min-height: 120px;
     height: 120px;
     background: rgba(0, 0, 0, 0.784);
+}
+
+#header_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
 }
 
 #logo {
     font-size: xx-large;
     margin: 0px;
-    margin-left: 10px;
+    margin-left: 20px;
     align-self: flex-start;
 }
 
@@ -27,6 +35,12 @@ header {
 #navigation ul li {
     display: inline-flex;
     list-style: none;
+    margin: 0px 5px;
+}
+
+#header_bottom {
+    width: 100%;
+    height: 60%;
 }
 
 #search {
@@ -37,26 +51,27 @@ header {
     align-self: center;
     width: 35%;
     min-width: 180px;
-    height: 25%;
+    height: 50%;
     background: white;
     padding: 0px 2px;
     border-radius: 5px;
 }
 
-#search input,
-#search button {
+#search .input,
+#search .button {
     position: relative;
     border: unset;
     height: 80%;
-    flex: 1;
+    outline: none;
 }
 
-#search input {
-    width: 79%;
+#search .input {
+    width: 64%;
 }
 
-#search button {
+#search .button {
     font-weight: bolder;
+    width: 34%;
     height: 95%;
     border-radius: 5px;
 }
@@ -67,7 +82,7 @@ header {
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     color: white;
     background-color: black;
     cursor: pointer;

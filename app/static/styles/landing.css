@@ -1,0 +1,138 @@
+main,
+main section {
+    border: 1px solid white;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    height: 100svh;
+    background: rgb(24, 24, 24);
+    color: white;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.118);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+}
+
+header h1:first-child {
+    margin: 0;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    /*box-shadow: 0px 0px 1px 0px rgb(113, 113, 113);*/
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+}
+
+.button {
+    background: rgb(19, 19, 19);
+    padding: 15px 20px 15px 20px;
+    margin: 10px;
+    width: fit-content;
+    border-radius: 30px;
+    font-size: 2rem;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgb(113, 113, 113);
+}
+
+main {
+    margin: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    padding: 0px 50px 0px 50px;
+    
+    
+}
+
+main section {
+    height: fit-content;
+    width: 97%;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 300px;
+}
+
+main section:first-child {
+    margin-top: 20px;
+}
+
+main section .image {
+    box-sizing: border-box;
+    width: 65%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+section#one .image {
+    background-image: url("../images/sports_bgs/formula_1.jpg");
+}
+
+section#two .image {
+    background-image: url("../images/sports_bgs/football.jpg");
+}
+
+section#three .image {
+    background-image: url("../images/sports_bgs/basketball.jpg");
+    background-position: top;
+}
+
+main section .text {
+    box-sizing: border-box;
+    text-align: center;
+    width: 35%;
+    padding: 40px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    height: fit-content;
+    min-height: 220px;
+    background: rgba(255, 255, 255, 0.118);
+    position: sticky;
+    top: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+}
+
+footer p,
+footer h1 {
+    margin: 0;
+}
+
+footer p {
+    max-width: 40%;
+    padding: 30px;
+}

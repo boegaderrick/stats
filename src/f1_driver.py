@@ -4,11 +4,13 @@ from sqlalchemy import Column, ForeignKey, Integer, String
 from src.athlete import Athlete, DecBase
 
 
-class F1Athlete(Athlete):
-    """F1 class definition"""
-    __tablename__ = 'f1_athletes'
+class F1Driver(Athlete):
+    """F1 driver class definition"""
+    __tablename__ = 'f1_drivers'
+    __mapper_args__ = {
+        'polymorphic_identity': 'F1Driver'
+    }
     id = Column(String(60), ForeignKey('athletes.id'), primary_key=True)
-    __mapper_args__ = {'polymorphic_identity': 'f1athlete'}
     podiums = Column(Integer, default=0)
     poles = Column(Integer, default=0)
     race_entries = Column(Integer, default=0)

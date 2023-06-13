@@ -2,14 +2,14 @@
 """This module contains the storage class"""
 from src.athlete import Athlete
 from src.base_class import BaseClass, DecBase
-from src.f1athlete import F1Athlete
+from src.f1_driver import F1Driver
 from src.sport import Sport
 from src.team import Team
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 
 
-classes = {'Athlete': Athlete, 'F1Athlete': F1Athlete, 'Sport': Sport, 'Team': Team}
+classes = {'Athlete': Athlete, 'F1Driver': F1Driver, 'Sport': Sport, 'Team': Team}
 
 
 class Database:
@@ -34,12 +34,12 @@ class Database:
         """Reloads data"""
         DecBase.metadata.create_all(self.__engine)
         factory = sessionmaker(bind=self.__engine, expire_on_commit=False)
-        self.__session = scoped_session(factory)()
+        self.__session = scoped_session(factory)
 
     def close(self):
         """Ends a session"""
         if self.__session:
-            self.__session.close()
+            self.__session.remove()
 
     def get(self, clss=None, obj_id=None, all=False):
         """This method retrieves data from the database"""
@@ -54,3 +54,9 @@ class Database:
                 return self.__session.query(classes[clss]).filter_by(id=obj_id).first()
             else:
                 return self.__session.query(classes[clss]).all()
+
+    def delete(self, obj=None):
+        """This method deletes an object from the database"""
+        if obj is not None:
+            self.__session.delete(obj)
+            self.save()

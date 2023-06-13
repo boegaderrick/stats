@@ -1,0 +1,161 @@
+#article {
+    overflow-y: unset;
+}
+
+#article .parts {
+    display: flex;
+    height: 90%;
+    width: 22%;
+    justify-content: center;
+    /*border: 1px solid white;*/
+    color: rgb(102, 146, 153);
+}
+
+#article .parts:first-child {
+    width: 76%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#article .parts:last-child {
+    align-items: center;
+}
+
+#article .parts .rows {
+    display: flex;
+    height: 90%;
+    width: 70%;
+    /*border: 1px solid white;*/
+    justify-content: center;
+    align-items: center;
+}
+
+#article .parts .rows:first-child {
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    height: 325px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.obj_picture {
+    width: 105px;
+    height: 105px;
+    /*background-image: url("../images/F1Drivers/lewis_hamilton.png");*/
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 0.1px solid rgb(0, 163, 184);
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px 1px rgb(0, 163, 184);
+}
+
+.obj_logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+    width: 60%;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.obj_logos div {
+    width: 95%;
+    height: 25%;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+/*.obj_sport {
+    background-image: url("../images/sport_logos/formula_1.png");
+}
+
+.obj_flag {
+    background-image: url("../images/flags/britain.png");
+}*/
+
+.obj_team {
+    /*background-image: url("../images/team_logos/mercedes-amg_petronas.png");*/
+    background-color: rgb(11, 54, 61);
+}
+
+.obj_sport,
+.obj_team,
+.obj_flag {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 95%;
+    overflow-y: scroll;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}
+
+.list li {
+    display: flex;
+}
+
+.list li p {
+    margin: 0;
+    background: rgb(22, 22, 22);
+    border-radius: 5px;
+    margin-bottom: 4px;
+    padding: 10px;
+}
+
+.list li p:first-child {
+    width: 35%;
+    margin-right: 4px;
+    border-right: 1px solid rgb(11, 54, 61);
+    color: white;
+}
+
+.list li p:last-child {
+    width: 60%;
+    border-left: 1px solid rgb(11, 54, 61);
+}
+
+.bio {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.bio::-webkit-scrollbar {
+    display: none;
+}
+
+.bio h3 {
+    text-align: center;
+    margin: 0px 0px 8px 0px;
+}
+
+.bio p {
+    margin: 0;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.bio p::-webkit-scrollbar {
+    display: none;
+}

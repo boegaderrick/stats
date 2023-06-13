@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="UTF-8">
+    <title>st&#9733;ts</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../../static/scripts/object_page.js"></script>
+	  <link rel="stylesheet" type="text/css" href="../../../static/styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/styles/body.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/styles/object_page.css">
+    <link rel="shortcut icon" type="img/png" href="../../../static/images/star_icon.png">
+  </head>
+  <body>
+    <header>
+      <div id="header_top">
+        <h1 id="logo" class="home_link">st&#9733;ts</h1>
+        <nav id="navigation">
+          <ul>
+            <li class="home_link">HOME</li>
+            <li>H-2-H</li>
+            <li>ABOUT</li>
+          </ul>
+        </nav>
+      </div>
+      <div id="header_bottom">
+        <form id="search">
+          <input type="text" name="query" placeholder="What are you looking for?" class="input">
+          <input type="submit" value="SEARCH" class="button">
+        </form>
+      </div>
+    </header>
+    <div id="container">
+      <section id="content">
+        <div id="article">
+          <section class="parts">
+            <div class="rows">
+              {% set pic_name = athlete.name|lower|replace(' ', '_') %}
+              {% set sport_logo = athlete.sport.name|lower|replace(' ', '_') %}
+              {% set team_logo = athlete.team.name|lower|replace(' ', '_') %}
+              {% set flag = athlete.country|lower|replace(' ', '_') %}
+              <section class="obj_picture" style="background-image: url('../../../static/images/{{ athlete.type }}s/{{ pic_name }}.png')"></section>
+              <p class="obj_name">{{ athlete.name }}</p>
+              <section class="obj_logos">
+                <div class="obj_sport" style="background-image: url('../../../static/images/sport_logos/{{ sport_logo }}.png')"></div>
+                <div class="obj_team" style="background-image: url('../../../static/images/team_logos/{{ team_logo }}.png')"></div>
+                <div class="obj_flag" style="background-image: url('../../../static/images/flags/{{ flag }}.png')"></div>
+              </section>
+            </div>
+            <div class="rows" class="attrs">
+              <ul class="list">
+                {% set skip_list = ['name', 'type', 'created_at', 'updated_at', 'sport_id', 'team_id', 'id'] %}
+                {% for key, value in athlete.items() %}
+                  {% if key not in skip_list %}
+                    {% if key == 'sport' or key == 'team' %}
+                    <li>
+                      <p>{{ key|replace('_', ' ')|title }}</p><p>{{ value.name }}</p>
+                    </li>
+                    {% else %}
+                      <li>
+                        <p>{{ key|replace('_', ' ')|title }}</p><p>{{ value }}</p>
+                      </li>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </section>
+          <section class="parts">
+            <div class="bio">
+              <h3>BIO</h3>
+              <p>{{ athlete.bio }}</p>
+            </div>
+          </section>
+        </div>
+      </section>
+	  </div>
+    <footer>
+      <nav id="navigation">
+        <ul>
+          <li class="home_link">HOME</li>
+          <li>HEAD-2-HEAD</li>
+          <li>ABOUT</li>
+        </ul>
+      </nav>
+      <p>&copy; 2023</p>
+    </footer>
+  </body>
+</html>

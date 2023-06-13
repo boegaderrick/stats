@@ -14,7 +14,8 @@ class Team(BaseClass, DecBase):
     sport_id = Column(String(60), ForeignKey('sports.id'), nullable=False)
 
     # DB Relationships
-    members = relationship('Athlete', backref='team')
+    members = relationship('Athlete', back_populates='team', lazy='joined')
+    sport = relationship('Sport', back_populates='teams', lazy='joined')
 
     def __init__(self, **kwargs):
         """Team object instantiation"""

@@ -10,8 +10,8 @@ class Sport(BaseClass, DecBase):
     __tablename__ = 'sports'
 
     # DB relationships
-    athletes = relationship('Athlete', backref='sport')
-    teams = relationship('Team', backref='sport')
+    athletes = relationship('Athlete', back_populates='sport', lazy='joined')
+    teams = relationship('Team', back_populates='sport', lazy='joined')
 
     def __init__(self, **kwargs):
         """Sport object instantiation"""
