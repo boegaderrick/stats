@@ -1,5 +1,5 @@
 $(document).ready(function () {
     $('.button').on('click', () => {
-        window.location.href = 'http://localhost:5005/stats/home'
+        window.location.href = 'https://boegaderrick.tech/stats/home'
     })
 })

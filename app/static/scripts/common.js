@@ -3,11 +3,11 @@ $(document).ready(function () {
     $('footer p').html(`&copy; ${year} STATS`)
 
     $('.home_link').on('click', () => {
-        window.location.href = 'http://localhost:5005/stats/home';
+        window.location.href = 'https://boegaderrick.tech/stats/home';
     });
 
     $('.about').on('click', () => {
-        window.location.href = 'http://localhost:5005/stats'
+        window.location.href = 'https://boegaderrick.tech/stats'
     });
 
     $('.github').on('click', () => {

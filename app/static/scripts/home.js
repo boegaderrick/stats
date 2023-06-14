@@ -11,7 +11,7 @@ function load_sport (sport) {
 function load_athletes (sport_name) {
     $('#teams').removeClass('active')
     $('#athletes').addClass('active');
-    fetch('http://localhost:5005/stats/api/athletes', {
+    fetch('https://boegaderrick.tech/stats/api/athletes', {
         method: 'GET',
         headers: {'content-type': 'application/json'},
         /*body: JSON.stringify({})*/
@@ -43,7 +43,7 @@ function load_athletes (sport_name) {
                 //const name = $(this).find('.name').text()
                 const id = $(this).attr('data-id')
                 const type = $(this).attr('data-type')
-                window.location.href = `http://localhost:5005/stats/athletes/${type}/${id}`
+                window.location.href = `https://boegaderrick.tech/stats/athletes/${type}/${id}`
             })
         })
 };
@@ -51,7 +51,7 @@ function load_athletes (sport_name) {
 function load_teams (sport_name) {
     $('#athletes').removeClass('active')
     $('#teams').addClass('active');
-    fetch('http://localhost:5005/stats/api/teams', {
+    fetch('https://boegaderrick.tech/stats/api/teams', {
         method: 'GET',
         headers: {'content-type': 'application/json'},
         /*body: JSON.stringify({})*/
@@ -82,7 +82,7 @@ function load_teams (sport_name) {
 
 $(document).ready(function () {
     let sports
-    fetch('http://localhost:5005/stats/api/sports', {
+    fetch('https://boegaderrick.tech/stats/api/sports', {
         method: 'GET',
         headers: {'content-type': 'application/json'}
     })
