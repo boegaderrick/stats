@@ -15,12 +15,12 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE DATABASE IF NOT EXISTS stats;
-USE stats;
-
 --
 -- Table structure for table `athletes`
 --
+
+CREATE DATABASE IF NOT EXISTS stats;
+USE stats;
 
 DROP TABLE IF EXISTS `athletes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -43,7 +43,7 @@ CREATE TABLE `athletes` (
   KEY `team_id` (`team_id`),
   CONSTRAINT `athletes_ibfk_1` FOREIGN KEY (`sport_id`) REFERENCES `sports` (`id`),
   CONSTRAINT `athletes_ibfk_2` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `f1_drivers` (
   `racing_number` int NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `f1_drivers_ibfk_1` FOREIGN KEY (`id`) REFERENCES `athletes` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `sports` (
   `name` varchar(120) NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -131,7 +131,7 @@ CREATE TABLE `teams` (
   PRIMARY KEY (`id`),
   KEY `sport_id` (`sport_id`),
   CONSTRAINT `teams_ibfk_1` FOREIGN KEY (`sport_id`) REFERENCES `sports` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

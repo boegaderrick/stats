@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """This module contains the storage class"""
+from os import getenv
 from src.athlete import Athlete
 from src.base_class import BaseClass, DecBase
 from src.f1_driver import F1Driver
@@ -19,7 +20,14 @@ class Database:
 
     def __init__(self):
         """Database object instantiation"""
-        self.__engine = create_engine('mysql+mysqldb://root@localhost/stats')
+        user = getenv('STATS_USER')
+        password = getenv('STATS_PASS')
+        if user is None or password is None:
+            print('Env [STATS_USER, STATS_PASS] missing')
+            exit(1)
+
+        url = f'mysql+mysqldb://{user}:{password}@localhost/stats'
+        self.__engine = create_engine(url)
 
     def save(self, obj=None):
         """Saves object to database"""
