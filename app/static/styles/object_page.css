@@ -1,5 +1,11 @@
+#content {
+    border-top: 0;
+    border-bottom: 0;
+}
+
 #article {
     overflow-y: unset;
+    align-items: center;
 }
 
 #article .parts {
@@ -35,7 +41,7 @@
     flex-direction: column;
     width: 210px;
     height: 325px;
-    border: 1px solid white;
+    border: 1px solid rgb(182, 182, 182);
     border-radius: 10px;
 }
 
@@ -58,14 +64,14 @@
     align-items: center;
     height: 40%;
     width: 60%;
-    border: 1px solid white;
+    border: 1px solid rgb(182, 182, 182);
     border-radius: 3px;
 }
 
 .obj_logos div {
     width: 95%;
     height: 25%;
-    border: 1px solid white;
+    border: 1px solid rgb(182, 182, 182);
     border-radius: 3px;
 }
 
@@ -97,8 +103,8 @@
     height: 100%;
     width: 95%;
     overflow-y: scroll;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    border-top: 2px solid rgb(182, 182, 182);
+    border-bottom: 2px solid rgb(182, 182, 182);
 }
 
 .list::-webkit-scrollbar {
@@ -121,7 +127,7 @@
     width: 35%;
     margin-right: 4px;
     border-right: 1px solid rgb(11, 54, 61);
-    color: white;
+    color: rgb(182, 182, 182);
 }
 
 .list li p:last-child {
@@ -133,7 +139,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
+    border: 1px solid rgb(182, 182, 182);
     border-radius: 10px;
     width: 100%;
     height: 80%;

@@ -1,7 +1,7 @@
-main,
+/*main,
 main section {
     border: 1px solid white;
-}
+}*/
 
 body {
     display: flex;
@@ -9,31 +9,47 @@ body {
     margin: 0;
     height: 100svh;
     background: rgb(24, 24, 24);
-    color: white;
+    color: rgb(138, 138, 138);
     font-size: 14px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+header,
+footer {
+    background: rgba(0, 0, 0, 0.471);
+    border-radius: 20px;
 }
 
 header {
     width: 100%;
     height: fit-content;
-    min-height: 300px;
-    background: rgba(255, 255, 255, 0.118);
+    min-height: 380px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px 0px 10px 0px;
+    padding: 30px 0px 10px 0px;
+    border-bottom: 4px solid rgb(50, 50, 50);
 }
 
 header h1:first-child {
     margin: 0;
-    font-size: 4em;
-    color: rgb(255, 255, 255);
+    font-size: 4.5em;
+    color: rgb(215, 215, 215);
     /*box-shadow: 0px 0px 1px 0px rgb(113, 113, 113);*/
     padding: 0px 10px 0px 10px;
     border-radius: 10px;
+}
+
+header p {
+    max-width: 35%;
+    padding: 5px 30px 5px 30px;
+    font-size: 1.3rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .button {
@@ -45,9 +61,14 @@ header h1:first-child {
     font-size: 2rem;
 }
 
+header .button {
+    background: rgb(26, 26, 26);
+}
+
 .button:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 5px 0px rgb(113, 113, 113);
+    box-shadow: 0px 0px 2px 0px rgb(53, 53, 53);
+    color: rgb(184, 184, 184);
 }
 
 main {
@@ -67,17 +88,24 @@ main {
 
 main section {
     height: fit-content;
-    width: 97%;
-    margin-bottom: 100px;
+    width: 100%;
+    margin-bottom: 50px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 300px;
+    min-height: 400px;
+    box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
+    border-radius: 50px;
+    overflow: hidden;
 }
 
 main section:first-child {
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+main section:last-child {
+    margin-bottom: 30px;
 }
 
 main section .image {
@@ -112,11 +140,20 @@ main section .text {
     justify-content: center;
 }
 
+main section .text h2 {
+    margin: 0;
+}
+
+/*section#one .text,
+section#three .text {
+    background: rgb(140, 140, 140);
+    color: black;
+}*/
+
 footer {
     width: 100%;
     height: fit-content;
-    min-height: 220px;
-    background: rgba(255, 255, 255, 0.118);
+    min-height: 100px;
     position: sticky;
     top: 100%;
     text-align: center;
@@ -124,7 +161,12 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0px 50px 0px;
+    background: unset;
+}
+
+footer .button {
+    font-size: 2.5rem;
 }
 
 footer p,
@@ -135,4 +177,20 @@ footer h1 {
 footer p {
     max-width: 40%;
     padding: 30px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul li {
+    margin: 0px 10px 0px 10px;
+}
+
+footer ul li:hover {
+    color: rgb(171, 171, 171);
+    cursor: pointer;
 }

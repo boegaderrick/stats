@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    color: white;
+    color: rgb(182, 182, 182);
     background: rgb(40, 40, 40);
     font-size: 14px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -58,12 +58,12 @@ body {
 
 #arrow_left,
 #arrow_right {
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 #arrow_left:hover,
 #arrow_right:hover {
-    opacity: 1;
+    opacity: 0.5;
     cursor: pointer;
 }
 
@@ -82,12 +82,12 @@ body {
     position: absolute;
     align-items: center;
     align-self: center;
-    font-size: 40px;
+    font-size: 3.8rem;
 }
 
 #sport h1:hover {
     cursor: pointer;
-    opacity: 0.5;
+    color: rgb(203, 203, 203);
 }
 
 /*#spoort::before {
@@ -121,7 +121,6 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: white;
     background: black;
     /*border-top: 2px solid black;*/
     border-top-left-radius: 5px;
@@ -141,7 +140,7 @@ body {
 #headlines #teams:hover,
 #headlines #athletes:hover {
     cursor: pointer;
-    background: rgba(28, 28, 28, 0.556);
+    background: rgba(28, 28, 28, 0.351);
     border-radius: 5px;
 }
 
@@ -154,10 +153,11 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    /*align-items: center;*/
     width: 100%;
-    min-height: 468px;
-    /*max-height: 800px;*/
+    min-height: 400px;
+    /*min-height: 468px;
+    max-height: 800px;*/
     overflow-y: scroll;
     /*border: 1px solid white;*/
 }

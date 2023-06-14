@@ -1,11 +1,12 @@
 header {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.299);
+    /*border-bottom: 4px solid rgb(50, 50, 50);*/
+    box-shadow: 0px 0px 7px 2px rgb(0, 0, 0);
     width: 100%;
-    min-height: 120px;
+    min-height: 150px;
     height: 120px;
-    background: rgba(0, 0, 0, 0.784);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 #header_top {
@@ -51,8 +52,8 @@ header {
     align-self: center;
     width: 35%;
     min-width: 180px;
-    height: 50%;
-    background: white;
+    height: 45%;
+    background: rgb(215, 215, 215);
     padding: 0px 2px;
     border-radius: 5px;
 }
@@ -63,6 +64,7 @@ header {
     border: unset;
     height: 80%;
     outline: none;
+    background: rgb(215, 215, 215);
 }
 
 #search .input {
@@ -78,12 +80,12 @@ header {
 
 #logo:hover,
 #navigation li:hover {
-    opacity: 0.3;
+    color: rgb(237, 237, 237);
     cursor: pointer;
 }
 
-.button:hover {
-    color: white;
-    background-color: black;
+#search .button:hover {
+    color: rgb(182, 182, 182);
+    background: black;
     cursor: pointer;
 }
