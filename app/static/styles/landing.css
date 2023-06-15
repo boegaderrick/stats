@@ -35,7 +35,7 @@ header {
 
 header h1:first-child {
     margin: 0;
-    font-size: 4.5em;
+    font-size: 5rem;
     color: rgb(215, 215, 215);
     /*box-shadow: 0px 0px 1px 0px rgb(113, 113, 113);*/
     padding: 0px 10px 0px 10px;
@@ -43,7 +43,7 @@ header h1:first-child {
 }
 
 header p {
-    max-width: 35%;
+    max-width: 60%;
     padding: 5px 30px 5px 30px;
     font-size: 1.3rem;
     margin: 0;
@@ -127,6 +127,10 @@ section#two .image {
 section#three .image {
     background-image: url("../images/sports_bgs/basketball.jpg");
     background-position: top;
+}
+
+section#four .image {
+    background-image: url("../images/sports_bgs/marathon.jpg");
 }
 
 main section .text {
