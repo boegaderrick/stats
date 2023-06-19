@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """This module contains athlete class definition"""
-from src.base_class import BaseClass, DecBase
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
+from src.base_class import BaseClass, DecBase
 
 
 class Athlete(BaseClass, DecBase):

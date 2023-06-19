@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This module contains the sport class"""
-from src.base_class import BaseClass, DecBase
 from sqlalchemy.orm import relationship
+from src.base_class import BaseClass, DecBase
 
 
 class Sport(BaseClass, DecBase):

@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """This module contains the storage class"""
 from os import getenv
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, scoped_session
 from src.athlete import Athlete
 from src.base_class import BaseClass, DecBase
 from src.f1_driver import F1Driver
 from src.sport import Sport
 from src.team import Team
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, scoped_session
 
 
 classes = {'Athlete': Athlete, 'F1Driver': F1Driver, 'Sport': Sport, 'Team': Team}
