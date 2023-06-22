@@ -4,6 +4,8 @@ STATS
 ### Introduction
 Stats is a web application that provides insights into various sports, teams and athletes. I built it as the final project of the foundations phase of the ALX SE curriculum in which I am enrolled as a student.
 
+![Object View](stats_object.png)
+
 [Live Project](https://boegaderrick.tech/stats)
 
 [Project blog](https://medium.com/@boegaderrick/alx-foundations-portfolio-project-a6110ad714b3)
