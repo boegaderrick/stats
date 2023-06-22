@@ -14,10 +14,10 @@ Stats is a web application that provides insights into various sports, teams and
 To use the site visit the live link posted [above](https://boegaderrick.tech/stats), you will be directed to the project's landing page which has a button to navigate to the project's home page. On the home page a sport is loaded by default in one of the page's two sections, under it there is a section populated with all athletes and teams participating in the sport named in the section above.
 
 ### Features & Guide
-* Search  ** Under development
+* Search  (Under development)
 
     As the name suggests, users will be able to perform simple searches of the database for all available sports, teams and athletes instead of having to peruse through the displayed objects manually.
-* Head-to-Head  ** Under development
+* Head-to-Head  (Under development)
 
     This will enable users to select two athletes or teams that fall under the same category and compare their attributes. 
 * Navigation
